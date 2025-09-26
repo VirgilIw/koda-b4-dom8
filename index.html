@@ -4,20 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM 8</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <nav>
-      <div class="container">
+    <nav
+      class="bg-[#E2A16F] flex items-center justify-center w-full p-6"
+      id="nav"
+    >
+      <div class="p-4 w-100%">
         <div>
-          <input type="text" id="input" placeholder="search character..." />
-          <button id="search">Search</button>
+          <input
+            type="text"
+            id="input"
+            placeholder="search character..."
+            class="w-56 focus:outline-none focus:ring-0 rounded-l-lg md:w-96 mx-[-10px]"
+            autocomplete="off"
+          />
+          <button
+            id="search"
+            class="bg-[#86B0BD] hover:bg-slate-400 hover:text-white rounded-r-lg"
+          >
+            Search
+          </button>
         </div>
       </div>
     </nav>
     <main>
-      <div class="container-main"></div>
+      <div
+        id="main"
+        class="flex flex-col md:flex-row md:grid md:grid-cols-3 bg-[#D1D3D4]"
+      ></div>
     </main>
-    <script src="script.js"></script>
+
+    <!-- pakai type="module" -->
+    <script
+      data-main="script/lib/main"
+      src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"
+    ></script>
   </body>
 </html>
